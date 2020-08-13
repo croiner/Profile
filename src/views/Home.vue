@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-content>
+      <v-container class="fill-height">
+        <v-row align-center justify-center>
+          <v-col cols="12" sm="8" md="8">
+            <v-card class="elevation-12">
+              <v-window v-model="step"></v-window>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  data:()=>({
+    step: 1
+  }),
+  props:{
+    source:String
+
   }
-}
+  
+};
 </script>
